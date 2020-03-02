@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/Master.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1 class="headerText">Online Real Estate</h1>
+            <nav style="padding:5px;">
+                <h2 class="link">
+                    @Html.ActionLink("Home", "Index")
+                    @Html.ActionLink("SignUp", "SignUp")
+                    @Html.ActionLink("LogIn", "Login")
+                </h2>
+            </nav>
+        </div>
+
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

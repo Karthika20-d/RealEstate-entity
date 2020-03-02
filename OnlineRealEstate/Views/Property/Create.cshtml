@@ -1,0 +1,57 @@
+﻿@model OnlineRealEstate.Models.PropertyModel
+
+
+<!DOCTYPE html>
+
+
+<body>
+    <div>
+        @if (ViewBag.Message != null)
+        {
+            Response.Write(ViewBag.Message);
+
+        }
+        @using (Html.BeginForm("Create", "Property", FormMethod.Post))
+        {
+
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(Model => Model.Area)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.Area)
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(Model => Model.PropertyType)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.PropertyType)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(Model => Model.Location)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(Model => Model.Location)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.ActionLink("Back", "DisplayLandDetails")
+                    </td>
+                    <td>
+                        <input type="submit" id="=submit" />
+                    </td>
+                </tr>
+            </table>
+        }
+
+    </div>
+</body>
+
